@@ -1,6 +1,6 @@
 {
   "name": "capstone-cjk-be",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node index.js"
@@ -8,11 +8,16 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "^4.18.2",
     "http-errors": "~1.6.3",
+<<<<<<< HEAD
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "nodemon": "^3.0.1"
+=======
+    "jade": "^1.9.2",
+    "morgan": "~1.9.1"
+>>>>>>> 2d91c2fa1b3f2c8f617e6d85287d2050fe464ecf
   },
   "main": "app.js",
   "author": "",
