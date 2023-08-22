@@ -12,4 +12,4 @@ const autoModel = new Schema(
   }
 );
 
-module.exports = mongoose.model('Auto', autoModel);
+module.exports = mongoose.model('Autos', autoModel);

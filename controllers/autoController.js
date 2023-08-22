@@ -1,8 +1,22 @@
+const Auto = require("../models/autoModel");
+
 const autoController = {
-    findAll: function (req, res) {
+    findAll: async function (req, res) {
+        await Auto.create({
+            make: "Ford",
+            model: "Explorer",
+            year: 2020,
+            mileage: 10,
+            price: 2000,
+        })
+        const autos = await Auto.find({});
+        console.log(autos);
         res.json(autos)
     }
 }
+
+
+
 
 //example from books controller
 
@@ -68,7 +82,7 @@ function booksController(Book) {
 
 }
 
-module.exports = booksController;
+//module.exports = booksController;
 
 // end of example
 
