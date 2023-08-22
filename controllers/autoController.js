@@ -2,15 +2,7 @@ const Auto = require("../models/autoModel");
 
 const autoController = {
     findAll: async function (req, res) {
-        await Auto.create({
-            make: "Ford",
-            model: "Explorer",
-            year: 2020,
-            mileage: 10,
-            price: 2000,
-        })
         const autos = await Auto.find({});
-        console.log(autos);
         res.json(autos)
     }
 }

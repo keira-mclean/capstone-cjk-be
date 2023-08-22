@@ -5,5 +5,4 @@ const autoController = require("../controllers/autoController");
 
 router.get('/', autoController.findAll)
 
-
 module.exports = router;
