@@ -1,9 +1,23 @@
 const Auto = require("../models/autoModel");
 
+
 const autoController = {
     findAll: async function (req, res) {
-        const autos = await Auto.find({});
-        res.json(autos)
+        try {
+            const autos = await Auto.find({});
+            res.json(autos);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
+    },
+    post: async function (req, res) {
+        try {
+            const auto = new Auto(req.body);
+            await auto.save();
+            res.status(201).json(auto);
+        } catch (err) {
+            res.status(400).json({ error: err.message });
+        }
     }
 }
 
@@ -12,7 +26,7 @@ const autoController = {
 
 //example from books controller
 
-function booksController(Book) {
+function bookController() {
 
     function post(req, res) {
 

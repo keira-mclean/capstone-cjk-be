@@ -3,6 +3,7 @@ const router = express.Router();
 
 const autoController = require("../controllers/autoController");
 
-router.get('/', autoController.findAll)
+router.get('/', autoController.findAll);
+router.post('/', autoController.post);
 
 module.exports = router;
