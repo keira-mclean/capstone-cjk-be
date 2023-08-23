@@ -13,17 +13,17 @@ export default function Navbar(props) {
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.google.com" onClick={(event) => { props.setPage("Parks"); event.preventDefault(); }}>
+                        <a href="https://www.google.com" onClick={(event) => { props.setPage("Buy"); event.preventDefault(); }}>
                             Buy
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.google.com" onClick={(event) => { props.setPage("Mountains"); event.preventDefault(); }}>
+                        <a href="https://www.google.com" onClick={(event) => { props.setPage("Sell"); event.preventDefault(); }}>
                             Sell
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.google.com" onClick={(event) => { props.setPage("Mountains"); event.preventDefault(); }}>
+                        <a href="https://www.google.com" onClick={(event) => { props.setPage("Contact"); event.preventDefault(); }}>
                             Contact Us
                         </a>
                     </li>
