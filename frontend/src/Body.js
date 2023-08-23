@@ -7,6 +7,7 @@ export default function Body(props) {
     const [mileage, setMileage] = useState('');
     const [price, setPrice] = useState('');
     const [message, setMessage] = useState('');
+    const [errorDetails, setErrorDetails] = useState(null);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -20,11 +21,19 @@ export default function Body(props) {
             });
             if (response.ok) {
                 setMessage('Form submitted successfully!');
+                setErrorDetails(null);
             } else {
                 setMessage('Form submission failed.');
+                const errorText = await response.text();
+                try {
+                    setErrorDetails(JSON.parse(errorText));
+                } catch (e) {
+                    setErrorDetails(errorText);
+                }
             }
         } catch (error) {
             setMessage('An error occurred while submitting the form.');
+            setErrorDetails(error.toString());
         }
     }
 
@@ -54,6 +63,12 @@ export default function Body(props) {
                 <button type="submit">Submit</button>
             </form>
             {message && <p>{message}</p>}
+            {errorDetails && (
+                <>
+                    <h3>Error Details</h3>
+                    <pre>{JSON.stringify(errorDetails, null, 2)}</pre>
+                </>
+            )}
         </>
     )
 }

@@ -1,6 +1,8 @@
 //import/require express so we can use it to create our application
 const express = require("express");
 
+const cors = require('cors');
+
 const mongoose = require("mongoose");
 
 //run express to create an express app and store it in the variable named app
@@ -11,6 +13,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/AUTODB', {useNewUrlParser: true, use
 
 //let express know that it is going to get JSON sent to it at some point in a request
 app.use(express.json());
+
+app.use(cors());
 
 //creating a variable represents the port we want our app to listen on
 const port = 5000;
