@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Button, FormGroup, FormLabel, Image, Container } from 'react-bootstrap';
+
+
 
 export default function PostVehicle(props) {
     const [make, setMake] = useState('');
@@ -39,37 +42,42 @@ export default function PostVehicle(props) {
 
     return (
         <>
+            <Container>
+                <div>
+                    <Image src="./carpic.jpg"></Image>
+                </div>
 
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Make:</label>
-                    <input type="text" value={make} onChange={e => setMake(e.target.value)} />
-                </div>
-                <div>
-                    <label>Model:</label>
-                    <input type="text" value={model} onChange={e => setModel(e.target.value)} />
-                </div>
-                <div>
-                    <label>Year:</label>
-                    <input type="number" value={year} onChange={e => setYear(e.target.value)} />
-                </div>
-                <div>
-                    <label>Mileage:</label>
-                    <input type="number" value={mileage} onChange={e => setMileage(e.target.value)} />
-                </div>
-                <div>
-                    <label>Price:</label>
-                    <input type="number" value={price} onChange={e => setPrice(e.target.value)} />
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-            {message && <p>{message}</p>}
-            {errorDetails && (
-                <>
-                    <h3>Error Details</h3>
-                    <pre>{JSON.stringify(errorDetails, null, 2)}</pre>
-                </>
-            )}
+                <FormGroup onSubmit={handleSubmit}>
+                    <div>
+                        <FormLabel column="lg" lg={1}>Make:</FormLabel>
+                        <input type="text" value={make} onChange={e => setMake(e.target.value)} />
+                    </div>
+                    <div>
+                        <FormLabel column="lg" lg={1}>Model:</FormLabel>
+                        <input type="text" value={model} onChange={e => setModel(e.target.value)} />
+                    </div>
+                    <div>
+                        <FormLabel column="lg" lg={1}>Year:</FormLabel>
+                        <input type="number" value={year} onChange={e => setYear(e.target.value)} />
+                    </div>
+                    <div>
+                        <FormLabel column="lg" lg={1}>Mileage:</FormLabel>
+                        <input type="number" value={mileage} onChange={e => setMileage(e.target.value)} />
+                    </div>
+                    <div>
+                        <FormLabel column="lg" lg={1}>Price:</FormLabel>
+                        <input type="number" value={price} onChange={e => setPrice(e.target.value)} />
+                    </div>
+                    <Button variant="secondary" size="lg" type="submit">Post vehicle for sale</Button>
+                </FormGroup>
+                {message && <p>{message}</p>}
+                {errorDetails && (
+                    <>
+                        <h3>Error Details</h3>
+                        <pre>{JSON.stringify(errorDetails, null, 2)}</pre>
+                    </>
+                )}
+            </Container>
         </>
     )
 }
