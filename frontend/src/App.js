@@ -11,7 +11,7 @@ function App() {
     <div className="App">
 
       <Navbar setPage={setPage} />
-      <Body page={page} />
+      <Body page={page} setPage={setPage} />
     </div>
   );
 }

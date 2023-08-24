@@ -6,10 +6,10 @@ import Contact from "./pages/Contact";
 
 export default function Body(props) {
   const pages = {
-    Home: <Home />,
-    Sell: <Sell />,
-    //Buy: <Buy />,
-    //Contact: <Contact />
+    Home: <Home setPage={props.setPage} />,
+    Sell: <Sell setPage={props.setPage} />,
+    Buy: <Buy setPage={props.setPage} />,
+    Contact: <Contact setPage={props.setPage} />
   };
 
   return (
