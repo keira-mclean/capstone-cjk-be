@@ -6,21 +6,7 @@ import './Home.css';
 
 
 
-export default function Home() {
-
-  const rowStyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  };
-
-  const imageStyle = {
-    flex: '1',
-    height: '200px',
-    margin: '0 10px',
-    objectFit: 'cover'
-  };
-
+export default function Home(props) {
 
   return (
     <>
@@ -33,30 +19,17 @@ export default function Home() {
       </div>
 
       <p>The Lot is a company that aims to make private party car sales easier and safer for both buyers and sellers. The company provides a platform where people can list their cars for sale, browse through available options, and contact potential sellers. The Lot also offers a range of services to ensure that people get the car they are expecting, such as vehicle inspection, title transfer, financing, and warranty. The Lot’s mission is to simplify the car buying and selling process, while also protecting the interests of both parties.</p>
-      {/* <Container>
-      <Row style={rowStyle}>
-        <Col xs>
-          <Image src="https://raw.githubusercontent.com/keira-mclean/capstone-cjk-be/main/frontend/Images/buycar.jpg" style={imageStyle} />
-        </Col>
-        <Col xs>
-          <Image src="https://raw.githubusercontent.com/keira-mclean/capstone-cjk-be/main/frontend/Images/sellcar.jpg" style={imageStyle} />
-        </Col>
-        <Col xs>
-          <Image src="https://raw.githubusercontent.com/keira-mclean/capstone-cjk-be/main/frontend/Images/ContactUsKiera.jpg" style={imageStyle} />
-        </Col>
-      </Row>
-    </Container> */}
 
 
       <Container>
         <Row>
           <Col xs>
-            <header style={{ paddingLeft: 0 }}>
-              <div
+            <header >
+            <div
                 className="homeMenu p-5 text-center bg-image"
                 style={{
                   backgroundImage:
-                    "url('https://raw.githubusercontent.com/keira-mclean/capstone-cjk-be/main/frontend/Images/buycar.jpg')",
+                  "url('https://raw.githubusercontent.com/keira-mclean/capstone-cjk-be/main/frontend/Images/buycar.jpg')",
                   backgroundSize: "cover"
                 }}
               >
@@ -65,29 +38,25 @@ export default function Home() {
                   style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
                 >
                   <div className="d-flex justify-content-center align-items-center h-100">
-                    <div className="text-white">
-
+                    <div className="text-black">
                       <a
-                        className="homeMenuButton btn btn-outline-dark btn-lg"
-                        href="#!"
-                        role="button"
-                      >
-                        Call to action
+                        className="btn btn-outline-dark btn-lg"
+                        href="#!" onClick={(event) => { props.setPage("./pages/Home"); event.preventDefault(); }}role="button">
+                        Search for your new Vehicle
                       </a>
-                    </div >
-                  </div >
-                </div >
-              </div >
+                    </div>
+                  </div>
+                </div>
+              </div>
             </header >
           </Col >
           <Col xs>
-            {" "}
             <header style={{ paddingLeft: 0 }}>
-              <div
+            <div
                 className="homeMenu p-5 text-center bg-image"
                 style={{
                   backgroundImage:
-                    "url('https://raw.githubusercontent.com/keira-mclean/capstone-cjk-be/main/frontend/Images/sellcar.jpg')",
+                  "url('https://raw.githubusercontent.com/keira-mclean/capstone-cjk-be/main/frontend/Images/sellcar.jpg')",
                   backgroundSize: "cover"
                 }}
               >
@@ -96,13 +65,11 @@ export default function Home() {
                   style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
                 >
                   <div className="d-flex justify-content-center align-items-center h-100">
-                    <div className="text-white">
+                    <div className="text-black">
                       <a
                         className="btn btn-outline-dark btn-lg"
-                        href="#!"
-                        role="button"
-                      >
-                        Call to action
+                        href="https://www.google.com" onClick={(event) => { props.setPage("Sell"); event.preventDefault(); }}role="button">
+                        Sell your vehicle
                       </a>
                     </div>
                   </div>

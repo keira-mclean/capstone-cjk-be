@@ -3,7 +3,8 @@
 }
 
 .homeMenu {
-    backgroundSize: "cover"
+    background-size: cover;
+    background-color: white;
 }
 
 .jumboTron {
@@ -16,6 +17,10 @@
     /* This will offer the illusion that it's adopting the
     background beneath it as its own but lightening it --
     almost like IOS. */
-    background: #fff;
+    background: #a59b9b;
     opacity: .4;
+}
+
+.buttonLink {
+    background-color: white;
 }
