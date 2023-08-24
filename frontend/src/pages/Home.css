@@ -1,0 +1,21 @@
+.App {
+    text-align: center;
+}
+
+.homeMenu {
+    backgroundSize: "cover"
+}
+
+.jumboTron {
+    text-shadow: white 1px 1px;
+}
+
+.homeMenuButton {
+    /* For your border-radius: */
+    border-radius: 4px;
+    /* This will offer the illusion that it's adopting the
+    background beneath it as its own but lightening it --
+    almost like IOS. */
+    background: #fff;
+    opacity: .4;
+}
