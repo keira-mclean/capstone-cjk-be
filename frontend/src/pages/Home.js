@@ -23,6 +23,7 @@ export default function Home(props) {
         <h5 className="heroText">On the road to happiness</h5>
       </div>
 
+
       <p className="companyInfo">
         The Lot is a company that aims to make private party car sales easier and safer for both buyers and sellers.
         The company provides a platform where people can list their cars for sale, browse through available options,
@@ -30,6 +31,7 @@ export default function Home(props) {
         are expecting, such as vehicle inspection, title transfer, financing, and warranty. The Lot’s mission is to
         simplify the car buying and selling process, while also protecting the interests of both parties.
       </p>
+
 
       <Container>
         <Row>
