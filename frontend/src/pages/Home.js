@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import heroImage from '../../src/Hero1.jpg';
 import './Home.css';
 
@@ -25,11 +25,11 @@ export default function Home(props) {
         <Row>
           <Col xs>
             <header >
-            <div
+              <div
                 className="homeMenu p-5 text-center bg-image"
                 style={{
                   backgroundImage:
-                  "url('https://raw.githubusercontent.com/keira-mclean/capstone-cjk-be/main/frontend/Images/buycar.jpg')",
+                    "url('https://raw.githubusercontent.com/keira-mclean/capstone-cjk-be/main/frontend/Images/buycar.jpg')",
                   backgroundSize: "cover"
                 }}
               >
@@ -41,7 +41,7 @@ export default function Home(props) {
                     <div className="text-black">
                       <a
                         className="btn btn-outline-dark btn-lg"
-                        href="#!" onClick={(event) => { props.setPage("./pages/Home"); event.preventDefault(); }}role="button">
+                        href="#!" onClick={(event) => { props.setPage("./pages/Home"); event.preventDefault(); }} role="button">
                         Search for your new Vehicle
                       </a>
                     </div>
@@ -52,11 +52,11 @@ export default function Home(props) {
           </Col >
           <Col xs>
             <header style={{ paddingLeft: 0 }}>
-            <div
+              <div
                 className="homeMenu p-5 text-center bg-image"
                 style={{
                   backgroundImage:
-                  "url('https://raw.githubusercontent.com/keira-mclean/capstone-cjk-be/main/frontend/Images/sellcar.jpg')",
+                    "url('https://raw.githubusercontent.com/keira-mclean/capstone-cjk-be/main/frontend/Images/sellcar.jpg')",
                   backgroundSize: "cover"
                 }}
               >
@@ -68,7 +68,7 @@ export default function Home(props) {
                     <div className="text-black">
                       <a
                         className="btn btn-outline-dark btn-lg"
-                        href="https://www.google.com" onClick={(event) => { props.setPage("Sell"); event.preventDefault(); }}role="button">
+                        href="https://www.google.com" onClick={(event) => { props.setPage("Sell"); event.preventDefault(); }} role="button">
                         Sell your vehicle
                       </a>
                     </div>

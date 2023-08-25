@@ -1,0 +1,92 @@
+/* CSS */
+.hero-image {
+    position: relative;
+    width: 100%;
+    /* height: 400px; */
+}
+
+.hero-image img {
+    width: 100%;
+    /* height: 100%;
+    object-fit: cover; */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hero-subtext {
+    position: absolute;
+    top: 60%;
+    /* Adjust this value to move the subtext down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text-content {
+    font-size: large;
+    margin-top: 16pt;
+    margin-bottom: 16pt;
+}
+
+.container {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            width: 750px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: calc(100% / 3);
+}
+
+.image-row {
+    display: flex;
+}
+
+.image-row img {
+    width: calc(100% / 3);
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+}
+
+#p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
