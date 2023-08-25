@@ -12,17 +12,9 @@ export default function Home(props) {
     <>
       <div className="jumboTron container-fluid bg-light p-5" style={{ backgroundImage: `url(${heroImage})` }}>
         <h1 className="display-4">Making the Car Buying and Selling Experience easy</h1>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+
         <h5 className="heroText">On the road to happiness</h5>
       </div>
-
 
       <p className="companyInfo">
         The Lot is a company that aims to make private party car sales easier and safer for both buyers and sellers.
