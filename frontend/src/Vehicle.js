@@ -1,22 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import "./Vehicle.css";
 
-export default function Vehicle() {
-    const [response, setResponse] = useState(null);
+export default function Vehicle(props) {
+    const { make, model, year, price, mileage, email } = props;
 
-    useEffect(() => {
-        async function fetchData() {
-            const res = await fetch("http://localhost:5000/api/autos", {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            });
-            setResponse(await res.json());
-        }
-        fetchData();
-    }, []);
+    const formattedPrice = price
+        ? price.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD",
+        })
+        : "N/A";
 
-    if (!response) return null;
+    const formattedMileage = mileage
+        ? mileage.toLocaleString("en-US")
+        : "N/A";
 
-    return <div>{JSON.stringify(response)}</div>;
+
+    return (
+        <div className="vehicleCard">
+            <img
+                className="vehicleImg"
+                src="https://img2.carmax.com/assets/24481790/hero.jpg?width=400"
+            ></img>
+            <div className="vehicleInfo">
+                <div className="carTitle">
+                    {year} {make} {model}
+                </div>
+                <div className="carDetails">
+                    {formattedPrice} | {formattedMileage}
+                    <br></br>
+                    <a href={"mailto:" + email}>
+                        <button>Contact</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    );
 }

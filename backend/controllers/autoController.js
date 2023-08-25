@@ -5,9 +5,9 @@ const autoController = {
     findAll: async function (req, res) {
         try {
             //code to only find one result
-            const autos = await Auto.aggregate([{ $sample: { size: 1 } }]);
+            //const autos = await Auto.aggregate([{ $sample: { size: 1 } }]);
             //original code to find all results
-            //const autos = await Auto.find({});
+            const autos = await Auto.find({});
             res.json(autos);
         } catch (err) {
             res.status(500).json({ error: err.message });
