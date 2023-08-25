@@ -17,9 +17,8 @@ button:hover {
 }
 
 .vehicleCard {
-    background-color: black;
     display: block;
-    width: 35%;
+    width: 40px;
     height: auto;
     opacity: 1;
     transition: opacity .75s cubic-bezier(.19, 1, .22, 1);
@@ -28,4 +27,6 @@ button:hover {
 
 }
 
-.vehicleImg {}
+.vehicleImg {
+    width: 35%;
+}

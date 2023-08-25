@@ -22,20 +22,17 @@ export default function VehicleList(props) {
 
     return (
         <div className="vehicleList">
-
-            <div>
-                {response.map((vehicle) => (
-                    <Vehicle
-                        key={vehicle._id}
-                        make={vehicle.make}
-                        model={vehicle.model}
-                        year={vehicle.year}
-                        price={vehicle.price}
-                        mileage={vehicle.mileage}
-                        email={vehicle.email}
-                    />
-                ))}
-            </div>
+            {response.map((vehicle) => (
+                <Vehicle
+                    key={vehicle._id}
+                    make={vehicle.make}
+                    model={vehicle.model}
+                    year={vehicle.year}
+                    price={vehicle.price}
+                    mileage={vehicle.mileage}
+                    email={vehicle.email}
+                />
+            ))}
         </div>
     );
 }
