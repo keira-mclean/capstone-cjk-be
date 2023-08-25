@@ -5,7 +5,7 @@ export default function Navbar(props) {
     return (
 
         <nav>
-            <img src="logo2.png" alt="Logo"></img>
+            <img src="https://github.com/keira-mclean/capstone-cjk-be/blob/main/frontend/public/logo2.jpg?raw=true" alt="Logo"></img>
             <ul>
                 <li>
                     <a href="https://www.google.com" onClick={(event) => { props.setPage("Home"); event.preventDefault(); }}>
