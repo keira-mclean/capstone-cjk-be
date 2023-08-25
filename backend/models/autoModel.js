@@ -9,6 +9,7 @@ const autoModel = new Schema(
     year: { type: Number },
     mileage: { type: Number },
     price: { type: Number },
+    email: { type: String },
   }
 );
 

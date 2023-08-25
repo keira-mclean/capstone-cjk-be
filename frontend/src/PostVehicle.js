@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './PostVehicle.css';
 
 
 
@@ -8,6 +9,7 @@ export default function PostVehicle(props) {
     const [year, setYear] = useState('');
     const [mileage, setMileage] = useState('');
     const [price, setPrice] = useState('');
+    const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [errorDetails, setErrorDetails] = useState(null);
 
@@ -19,7 +21,7 @@ export default function PostVehicle(props) {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ make, model, year, mileage, price })
+                body: JSON.stringify({ make, model, year, mileage, price, email })
             });
             if (response.ok) {
                 setMessage('Form submitted successfully!');
@@ -41,33 +43,37 @@ export default function PostVehicle(props) {
 
     return (
         <>
-            <container>
+
                 <div>
                     <img src="./carpic.jpg"></img>
                 </div>
 
                 <form onSubmit={handleSubmit}>
-                    <div>
-                        <label column="lg" lg={1}>Make:</label>
-                        <input type="text" value={make} onChange={e => setMake(e.target.value)} />
+                    <div className="postDiv">
+                        <label className="postLabel" column="lg" lg={1}>Make:</label>
+                        <input className="postInput" type="text" value={make} onChange={e => setMake(e.target.value)} />
                     </div>
-                    <div>
-                        <label column="lg" lg={1}>Model:</label>
-                        <input type="text" value={model} onChange={e => setModel(e.target.value)} />
+                    <div className="postDiv">
+                        <label className="postLabel" column="lg" lg={1}>Model:</label>
+                        <input className="postInput" type="text" value={model} onChange={e => setModel(e.target.value)} />
                     </div>
-                    <div>
-                        <label column="lg" lg={1}>Year:</label>
-                        <input type="number" value={year} onChange={e => setYear(e.target.value)} />
+                    <div className="postDiv">
+                        <label className="postLabel" column="lg" lg={1}>Year:</label>
+                        <input className="postInput" type="number" value={year} onChange={e => setYear(e.target.value)} />
                     </div>
-                    <div>
-                        <label column="lg" lg={1}>Mileage:</label>
-                        <input type="number" value={mileage} onChange={e => setMileage(e.target.value)} />
+                    <div className="postDiv">
+                        <label className="postLabel" column="lg" lg={1}>Mileage:</label>
+                        <input className="postInput" type="number" value={mileage} onChange={e => setMileage(e.target.value)} />
                     </div>
-                    <div>
-                        <label column="lg" lg={1}>Price:</label>
-                        <input type="number" value={price} onChange={e => setPrice(e.target.value)} />
+                    <div className="postDiv">
+                        <label className="postLabel"  column="lg" lg={1}>Price:</label>
+                        <input className="postInput" type="number" value={price} onChange={e => setPrice(e.target.value)} />
                     </div>
-                    <button variant="secondary" size="lg" type="submit">Post vehicle for sale</button>
+                    <div className="postDiv">
+                        <label className="postLabel"  column="lg" lg={1}>Contact Email:</label>
+                        <input className="postInput" type="text" value={email} onChange={e => setEmail(e.target.value)} />
+                    </div>
+                    <button className="postButton" variant="secondary" size="lg" type="submit">Post vehicle for sale</button>
                 </form>
                 {message && <p>{message}</p>}
                 {errorDetails && (
@@ -76,7 +82,7 @@ export default function PostVehicle(props) {
                         <pre>{JSON.stringify(errorDetails, null, 2)}</pre>
                     </>
                 )}
-            </container>
+
         </>
     )
 }
