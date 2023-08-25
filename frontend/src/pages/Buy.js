@@ -6,7 +6,7 @@ export default function Home(props) {
         <>
             <div className="hero-image">
                 <img src="https://cdn1-blog.iseecars.com/wp-content/uploads/2017/11/car-sales-photo-e1622734127327.jpg" alt="Hero Image"></img>
-                <h1 className="hero-text">The Lot</h1>
+                <h1 className="hero-text">THE LOT</h1>
                 <h3 className="hero-subtext">There is a lot going on here!</h3>
             </div>
             <div className="container">
