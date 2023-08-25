@@ -4,12 +4,17 @@ const Auto = require("../models/autoModel");
 const autoController = {
     findAll: async function (req, res) {
         try {
-            const autos = await Auto.find({});
+            //code to only find one result
+            const autos = await Auto.aggregate([{ $sample: { size: 1 } }]);
+            //original code to find all results
+            //const autos = await Auto.find({});
             res.json(autos);
         } catch (err) {
             res.status(500).json({ error: err.message });
         }
     },
+
+
     post: async function (req, res) {
         try {
             const auto = new Auto(req.body);
