@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button, FormGroup, FormLabel, Image, Container } from 'react-bootstrap';
 
 
 
@@ -42,34 +41,34 @@ export default function PostVehicle(props) {
 
     return (
         <>
-            <Container>
+            <container>
                 <div>
-                    <Image src="./carpic.jpg"></Image>
+                    <img src="./carpic.jpg"></img>
                 </div>
 
-                <FormGroup onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <div>
-                        <FormLabel column="lg" lg={1}>Make:</FormLabel>
+                        <label column="lg" lg={1}>Make:</label>
                         <input type="text" value={make} onChange={e => setMake(e.target.value)} />
                     </div>
                     <div>
-                        <FormLabel column="lg" lg={1}>Model:</FormLabel>
+                        <label column="lg" lg={1}>Model:</label>
                         <input type="text" value={model} onChange={e => setModel(e.target.value)} />
                     </div>
                     <div>
-                        <FormLabel column="lg" lg={1}>Year:</FormLabel>
+                        <label column="lg" lg={1}>Year:</label>
                         <input type="number" value={year} onChange={e => setYear(e.target.value)} />
                     </div>
                     <div>
-                        <FormLabel column="lg" lg={1}>Mileage:</FormLabel>
+                        <label column="lg" lg={1}>Mileage:</label>
                         <input type="number" value={mileage} onChange={e => setMileage(e.target.value)} />
                     </div>
                     <div>
-                        <FormLabel column="lg" lg={1}>Price:</FormLabel>
+                        <label column="lg" lg={1}>Price:</label>
                         <input type="number" value={price} onChange={e => setPrice(e.target.value)} />
                     </div>
-                    <Button variant="secondary" size="lg" type="submit">Post vehicle for sale</Button>
-                </FormGroup>
+                    <button variant="secondary" size="lg" type="submit">Post vehicle for sale</button>
+                </form>
                 {message && <p>{message}</p>}
                 {errorDetails && (
                     <>
@@ -77,7 +76,7 @@ export default function PostVehicle(props) {
                         <pre>{JSON.stringify(errorDetails, null, 2)}</pre>
                     </>
                 )}
-            </Container>
+            </container>
         </>
     )
 }
