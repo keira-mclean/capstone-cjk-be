@@ -17,8 +17,10 @@ button:hover {
 }
 
 .vehicleCard {
-    display: block;
-    width: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    block-size: 100px;
     height: auto;
     opacity: 1;
     transition: opacity .75s cubic-bezier(.19, 1, .22, 1);
@@ -28,5 +30,6 @@ button:hover {
 }
 
 .vehicleImg {
-    width: 35%;
+    width: 100%;
+    justify-content: center;
 }

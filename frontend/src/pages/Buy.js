@@ -7,7 +7,7 @@ export default function Buy(props) {
     return (
         <>
 
-            <h3 className="hero-subtext">There is not much going on here... yet!</h3>
+            <h3 className="hero-subtext"></h3>
             <div>
                 <VehicleList />
                 <Vehicle />
