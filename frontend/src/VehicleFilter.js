@@ -2,16 +2,12 @@ import React from 'react';
 import './VehicleFilter.css';
 import FilterMake from "./FilterMake";
 
-export default function VehicleFilter() {
-
+export default function VehicleFilter({ setSelectedOptions }) {
     return (
         <>
             <div >
-                <FilterMake options={options} />
+                <FilterMake setSelectedOptions={setSelectedOptions} />
             </div>
-
-
         </>
     )
 }
-

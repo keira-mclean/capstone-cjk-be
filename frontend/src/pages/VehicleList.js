@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import Vehicle from "../Vehicle";
 import "./VehicleList.css"
 
-export default function VehicleList(props) {
+export default function VehicleList({ selectedMakes }) {
     const [response, setResponse] = useState(null);
+
 
     useEffect(() => {
         async function fetchData() {
@@ -21,18 +22,23 @@ export default function VehicleList(props) {
     if (!response) return null;
 
     return (
-        <div className="vehicleList">
-            {response.map((vehicle) => (
-                <Vehicle
-                    key={vehicle._id}
-                    make={vehicle.make}
-                    model={vehicle.model}
-                    year={vehicle.year}
-                    price={vehicle.price}
-                    mileage={vehicle.mileage}
-                    email={vehicle.email}
-                />
-            ))}
-        </div>
+        <>
+            <p>{selectedMakes}</p>
+            <div className="vehicleList">
+                {response
+                    .filter(vehicle => !selectedMakes || selectedMakes.includes(vehicle.make))
+                    .map((vehicle) => (
+                        <Vehicle
+                            key={vehicle._id}
+                            make={vehicle.make}
+                            model={vehicle.model}
+                            year={vehicle.year}
+                            price={vehicle.price}
+                            mileage={vehicle.mileage}
+                            email={vehicle.email}
+                        />
+                    ))}
+            </div>
+        </>
     );
 }

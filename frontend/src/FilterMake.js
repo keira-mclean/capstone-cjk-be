@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-
-
-const FilterMake = () => {
+const FilterMake = ({ setSelectedOptions }) => {
     const [expanded, setExpanded] = useState(false);
-    const [selectedOptions, setSelectedOptions] = useState([]);
-    const options = ['Option 1', 'Option 2', 'Option 3'];
+    const [response, setResponse] = useState(null);
+
+    useEffect(() => {
+        async function fetchData() {
+            const res = await fetch("http://localhost:5000/api/autos/makes", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            setResponse(await res.json());
+        }
+        fetchData();
+    }, []);
+
+    if (!response) return null;
+
+    const options = response;
 
     const handleExpand = () => {
         setExpanded(!expanded);
@@ -23,7 +37,7 @@ const FilterMake = () => {
     return (
         <div>
             <button onClick={handleExpand}>
-                {expanded ? 'Collapse' : 'Expand'}
+                {expanded ? 'Collapse' : 'Filter by Make'}
             </button>
             {expanded && (
                 <ul>
@@ -34,7 +48,6 @@ const FilterMake = () => {
                                     type="checkbox"
                                     value={option}
                                     onChange={handleOptionChange}
-                                    checked={selectedOptions.includes(option)}
                                 />
                                 {option}
                             </label>
