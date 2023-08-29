@@ -24,9 +24,10 @@
     background-color: white;
 }
 .heroText {
-    color: #FA5B75;
+    color: white;
     margin: 40px;
     padding: 150px; 
+    font-size: 40px;
 }
 .companyInfo {
     color: rgb(16, 58, 49);
