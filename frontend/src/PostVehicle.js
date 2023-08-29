@@ -48,30 +48,24 @@ export default function PostVehicle(props) {
                     <img src="./carpic.jpg"></img>
                 </div>
 
-                <form onSubmit={handleSubmit}>
+                <form className="post-form" onSubmit={handleSubmit}>
                     <div className="postDiv">
-                        <label className="postLabel" column="lg" lg={1}>Make:</label>
-                        <input className="postInput" type="text" value={make} onChange={e => setMake(e.target.value)} />
+                        <input placeholder="Make" className="postInput" type="text" value={make} onChange={e => setMake(e.target.value)} />
                     </div>
                     <div className="postDiv">
-                        <label className="postLabel" column="lg" lg={1}>Model:</label>
-                        <input className="postInput" type="text" value={model} onChange={e => setModel(e.target.value)} />
+                        <input placeholder="Model" className="postInput" type="text" value={model} onChange={e => setModel(e.target.value)} />
                     </div>
                     <div className="postDiv">
-                        <label className="postLabel" column="lg" lg={1}>Year:</label>
-                        <input className="postInput" type="number" value={year} onChange={e => setYear(e.target.value)} />
+                        <input placeholder="Year" className="postInput" type="number" value={year} onChange={e => setYear(e.target.value)} />
                     </div>
                     <div className="postDiv">
-                        <label className="postLabel" column="lg" lg={1}>Mileage:</label>
-                        <input className="postInput" type="number" value={mileage} onChange={e => setMileage(e.target.value)} />
+                        <input placeholder="Mileage" className="postInput" type="number" value={mileage} onChange={e => setMileage(e.target.value)} />
                     </div>
                     <div className="postDiv">
-                        <label className="postLabel"  column="lg" lg={1}>Price:</label>
-                        <input className="postInput" type="number" value={price} onChange={e => setPrice(e.target.value)} />
+                        <input placeholder="Price" className="postInput" type="number" value={price} onChange={e => setPrice(e.target.value)} />
                     </div>
                     <div className="postDiv">
-                        <label className="postLabel"  column="lg" lg={1}>Contact Email:</label>
-                        <input className="postInput" type="text" value={email} onChange={e => setEmail(e.target.value)} />
+                        <input placeholder="Contact Email" className="postInput" type="text" value={email} onChange={e => setEmail(e.target.value)} />
                     </div>
                     <button className="postButton" variant="secondary" size="lg" type="submit">Post vehicle for sale</button>
                 </form>

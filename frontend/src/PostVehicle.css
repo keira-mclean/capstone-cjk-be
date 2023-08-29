@@ -1,11 +1,9 @@
-.postLabel {
-    display: block;
 
-}
 
 .postInput {
     display: inline-block;
     width: 20em;
+    margin-top: 3vh;
 }
 
 .postDiv {
