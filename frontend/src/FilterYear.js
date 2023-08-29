@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import "./Filter.css"
 
-const FilterModel = ({ setSelectedModelOptions }) => {
+const FilterYear = ({ setSelectedYearOptions }) => {
     const [expanded, setExpanded] = useState(false);
     const [response, setResponse] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
-            const res = await fetch("http://localhost:5000/api/autos/models", {
+            const res = await fetch("http://localhost:5000/api/autos/years", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const FilterModel = ({ setSelectedModelOptions }) => {
 
     const handleOptionChange = (event) => {
         const { value } = event.target;
-        setSelectedModelOptions((prevSelectedOptions) =>
+        setSelectedYearOptions((prevSelectedOptions) =>
             prevSelectedOptions.includes(value)
                 ? prevSelectedOptions.filter((option) => option !== value)
                 : [...prevSelectedOptions, value]
@@ -38,7 +38,7 @@ const FilterModel = ({ setSelectedModelOptions }) => {
     return (
         <div>
             <button onClick={handleExpand}>
-                {expanded ? 'Collapse by Model' : 'Filter by Model'}
+                {expanded ? 'Collapse by Year' : 'Filter by Year'}
             </button>
             {expanded && (
                 <ul className="makeList">
@@ -60,4 +60,4 @@ const FilterModel = ({ setSelectedModelOptions }) => {
     );
 };
 
-export default FilterModel;
+export default FilterYear;

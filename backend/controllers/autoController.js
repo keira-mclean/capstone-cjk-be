@@ -28,6 +28,15 @@ const autoController = {
         }
     },
 
+    findYears: async function (req, res) {
+        try {
+            const years = await Auto.distinct('year');
+            res.json(years);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
+    },
+
     post: async function (req, res) {
         try {
             const auto = new Auto(req.body);
