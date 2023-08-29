@@ -51,6 +51,7 @@ export default function PostVehicle(props) {
                 <img src="./carpic.jpg"></img>
             </div>
             <form className="post-form" onSubmit={handleSubmit}>
+                <h2>Post your vehicle for sale</h2>
                 <div className="postDiv">
                     <input placeholder="Make" className="postInput" type="text" value={make} onChange={e => setMake(e.target.value)} />
                 </div>
