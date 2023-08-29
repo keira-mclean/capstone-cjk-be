@@ -26,7 +26,7 @@ export default function VehicleList({ selectedMakes }) {
             <p>{selectedMakes}</p>
             <div className="vehicleList">
                 {response
-                    .filter(vehicle => !selectedMakes || selectedMakes.includes(vehicle.make))
+                    .filter(vehicle => !selectedMakes.length || selectedMakes.includes(vehicle.make))
                     .map((vehicle) => (
                         <Vehicle
                             key={vehicle._id}
