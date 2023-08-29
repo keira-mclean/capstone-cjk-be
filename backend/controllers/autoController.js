@@ -19,6 +19,15 @@ const autoController = {
         }
     },
 
+    findModels: async function (req, res) {
+        try {
+            const models = await Auto.distinct('model');
+            res.json(models);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
+    },
+
     post: async function (req, res) {
         try {
             const auto = new Auto(req.body);

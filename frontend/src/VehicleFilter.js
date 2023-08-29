@@ -1,8 +1,9 @@
 import React from 'react';
 import './VehicleFilter.css';
 import FilterMake from "./FilterMake";
+import FilterModel from './FilterModel';
 
-export default function VehicleFilter({ setSelectedOptions }) {
+export default function VehicleFilter({ setSelectedOptions, setSelectedModelOptions }) {
     return (
         <>
             <div >
@@ -14,6 +15,7 @@ export default function VehicleFilter({ setSelectedOptions }) {
                     Filter
                 </div>
                 <FilterMake setSelectedOptions={setSelectedOptions} />
+                <FilterModel setSelectedModelOptions={setSelectedModelOptions} />
             </div>
         </>
     )
