@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Contact.css";
-import heroImage from "../../src/Hero2.jpg";
+import heroImage from "../../src/contact_us_photo.avif";
 
 const Contact = () => {
   const [formStatus, setFormStatus] = React.useState('Send')

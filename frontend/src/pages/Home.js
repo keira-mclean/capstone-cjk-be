@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import heroImage from '../../src/Hero1.jpg';
+import heroImage from '../../src/home_photo.avif';
 import './Home.css';
 
 
