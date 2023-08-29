@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './PostVehicle.css';
 
-
-
 export default function PostVehicle(props) {
     const [make, setMake] = useState('');
     const [model, setModel] = useState('');
@@ -26,6 +24,12 @@ export default function PostVehicle(props) {
             if (response.ok) {
                 setMessage('Form submitted successfully!');
                 setErrorDetails(null);
+                setMake('');
+                setModel('');
+                setYear('');
+                setMileage('');
+                setPrice('');
+                setEmail('');
             } else {
                 setMessage('Form submission failed.');
                 const errorText = await response.text();
@@ -43,40 +47,37 @@ export default function PostVehicle(props) {
 
     return (
         <>
-
-                <div>
-                    <img src="./carpic.jpg"></img>
+            <div>
+                <img src="./carpic.jpg"></img>
+            </div>
+            <form className="post-form" onSubmit={handleSubmit}>
+                <div className="postDiv">
+                    <input placeholder="Make" className="postInput" type="text" value={make} onChange={e => setMake(e.target.value)} />
                 </div>
-
-                <form className="post-form" onSubmit={handleSubmit}>
-                    <div className="postDiv">
-                        <input placeholder="Make" className="postInput" type="text" value={make} onChange={e => setMake(e.target.value)} />
-                    </div>
-                    <div className="postDiv">
-                        <input placeholder="Model" className="postInput" type="text" value={model} onChange={e => setModel(e.target.value)} />
-                    </div>
-                    <div className="postDiv">
-                        <input placeholder="Year" className="postInput" type="number" value={year} onChange={e => setYear(e.target.value)} />
-                    </div>
-                    <div className="postDiv">
-                        <input placeholder="Mileage" className="postInput" type="number" value={mileage} onChange={e => setMileage(e.target.value)} />
-                    </div>
-                    <div className="postDiv">
-                        <input placeholder="Price" className="postInput" type="number" value={price} onChange={e => setPrice(e.target.value)} />
-                    </div>
-                    <div className="postDiv">
-                        <input placeholder="Contact Email" className="postInput" type="text" value={email} onChange={e => setEmail(e.target.value)} />
-                    </div>
-                    <button className="postButton" variant="secondary" size="lg" type="submit">Post vehicle for sale</button>
-                </form>
-                {message && <p>{message}</p>}
-                {errorDetails && (
-                    <>
-                        <h3>Error Details</h3>
-                        <pre>{JSON.stringify(errorDetails, null, 2)}</pre>
-                    </>
-                )}
-
+                <div className="postDiv">
+                    <input placeholder="Model" className="postInput" type="text" value={model} onChange={e => setModel(e.target.value)} />
+                </div>
+                <div className="postDiv">
+                    <input placeholder="Year" className="postInput" type="number" value={year} onChange={e => setYear(e.target.value)} />
+                </div>
+                <div className="postDiv">
+                    <input placeholder="Mileage" className="postInput" type="number" value={mileage} onChange={e => setMileage(e.target.value)} />
+                </div>
+                <div className="postDiv">
+                    <input placeholder="Price" className="postInput" type="number" value={price} onChange={e => setPrice(e.target.value)} />
+                </div>
+                <div className="postDiv">
+                    <input placeholder="Contact Email" className="postInput" type="text" value={email} onChange={e => setEmail(e.target.value)} />
+                </div>
+                <button className="postButton" variant="secondary" size="lg" type="submit">Post vehicle for sale</button>
+            </form>
+            {message && <p>{message}</p>}
+            {errorDetails && (
+                <>
+                    <h3>Error Details</h3>
+                    <pre>{JSON.stringify(errorDetails, null, 2)}</pre>
+                </>
+            )}
         </>
     )
 }
