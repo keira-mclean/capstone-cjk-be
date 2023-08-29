@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import "./FilterMake.css"
 
-const FilterMake = ({ setSelectedOptions }) => {
+const FilterModel = ({ setSelectedModelOptions }) => {
     const [expanded, setExpanded] = useState(false);
     const [response, setResponse] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
-            const res = await fetch("http://localhost:5000/api/autos/makes", {
+            const res = await fetch("http://localhost:5000/api/autos/models", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const FilterMake = ({ setSelectedOptions }) => {
 
     const handleOptionChange = (event) => {
         const { value } = event.target;
-        setSelectedOptions((prevSelectedOptions) =>
+        setSelectedModelOptions((prevSelectedOptions) =>
             prevSelectedOptions.includes(value)
                 ? prevSelectedOptions.filter((option) => option !== value)
                 : [...prevSelectedOptions, value]
@@ -38,7 +38,7 @@ const FilterMake = ({ setSelectedOptions }) => {
     return (
         <div>
             <button onClick={handleExpand}>
-                {expanded ? 'Collapse by Make' : 'Filter by Make'}
+                {expanded ? 'Collapse by Model' : 'Filter by Model'}
             </button>
             {expanded && (
                 <ul className="makeList">
@@ -60,4 +60,4 @@ const FilterMake = ({ setSelectedOptions }) => {
     );
 };
 
-export default FilterMake;
+export default FilterModel;
