@@ -4,6 +4,7 @@ import heroImage from "../../src/contact_us_photo.avif";
 
 const Contact = () => {
   const [formStatus, setFormStatus] = React.useState('Send')
+  const [submitted, setSubmitted] = useState(false);
   const onSubmit = (e) => {
     e.preventDefault()
     setFormStatus('Submited')
@@ -14,7 +15,16 @@ const Contact = () => {
       message: message.value,
     }
     console.log(conFom)
+    resetForm();
+    setSubmitted(true);
   }
+
+  const resetForm = () => {
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+  }
+
   return (
     <>
       <div className="homeMenu jumboTron container-fluid bg-light p-5" style={{ backgroundImage: `url(${heroImage})` }}>
@@ -24,6 +34,7 @@ const Contact = () => {
       </div>
       <div className="contactDiv">
         <h2 className="mb-3">Contact Us</h2>
+        {submitted && <p>Thank you for your feedback!</p>}
         <form onSubmit={onSubmit}>
           <div className="mb-3">
             <input placeholder="Name" className="contactInput" type="text" id="name" required />
@@ -38,6 +49,7 @@ const Contact = () => {
             {formStatus}
           </button>
         </form>
+
       </div>
     </>
   )
