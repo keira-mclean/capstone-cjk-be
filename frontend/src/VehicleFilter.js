@@ -3,8 +3,9 @@ import './VehicleFilter.css';
 import FilterMake from "./FilterMake";
 import FilterModel from './FilterModel';
 import FilterYear from './FilterYear';
+import FilterMileage from './FilterMileage';
 
-export default function VehicleFilter({ setSelectedOptions, setSelectedModelOptions, setSelectedYearOptions }) {
+export default function VehicleFilter({ setSelectedOptions, setSelectedModelOptions, setSelectedYearOptions, setMileageOptions }) {
     return (
         <>
             <div >
@@ -18,6 +19,7 @@ export default function VehicleFilter({ setSelectedOptions, setSelectedModelOpti
                 <FilterMake setSelectedOptions={setSelectedOptions} />
                 <FilterModel setSelectedModelOptions={setSelectedModelOptions} />
                 <FilterYear setSelectedYearOptions={setSelectedYearOptions} />
+                <FilterMileage setMileageOptions={setMileageOptions} />
             </div>
         </>
     )
