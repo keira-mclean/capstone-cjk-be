@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "./FilterMake.css"
 
 const FilterMake = ({ setSelectedOptions }) => {
     const [expanded, setExpanded] = useState(false);
@@ -37,12 +38,12 @@ const FilterMake = ({ setSelectedOptions }) => {
     return (
         <div>
             <button onClick={handleExpand}>
-                {expanded ? 'Collapse' : 'Filter by Make'}
+                {expanded ? 'Collapse by Make' : 'Filter by Make'}
             </button>
             {expanded && (
-                <ul>
+                <ul className="makeList">
                     {options.map((option) => (
-                        <li key={option}>
+                        <li key={option} className="Make">
                             <label>
                                 <input
                                     type="checkbox"
