@@ -1,4 +1,7 @@
 /* CSS */
+
+
+
 nav {
   background-color: white;
   overflow: hidden;
@@ -32,4 +35,10 @@ nav a {
 
 nav a:hover {
   background-color: #dacbcb;
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-color: #e07e8f;
+  text-decoration-thickness: 3px;
 }
