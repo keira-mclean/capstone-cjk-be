@@ -5,11 +5,10 @@
 .homeMenu {
     background-size: cover;
     background-color: white;
+    
 }
 
-.jumboTron {
-    text-shadow: white 1px 1px;
-}
+
 
 .homeMenuButton {
     /* For your border-radius: */
@@ -25,7 +24,7 @@
     background-color: white;
 }
 .heroText {
-    color: white;
+    color: #FA5B75;
     margin: 40px;
     padding: 150px; 
 }
