@@ -21,7 +21,8 @@
 }
 
 .buttonLink {
-    background-color: white;
+    background-color: rgb(232, 150, 150);
+    color: white;
 }
 .heroText {
     color: white;

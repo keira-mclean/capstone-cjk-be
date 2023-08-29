@@ -44,7 +44,7 @@ export default function Home(props) {
                   <div className="d-flex justify-content-center align-items-center h-100">
                     <div className="text-black">
                       <a
-                        className="btn btn-outline-dark btn-lg"
+                        className="btn btn-outline-dark buttonLink"
                         href="https://www.google.com" onClick={(event) => { props.setPage("Buy"); event.preventDefault(); }} role="button">
                         Find your vehicle
                       </a>
@@ -71,7 +71,7 @@ export default function Home(props) {
                   <div className="d-flex justify-content-center align-items-center h-100">
                     <div className="text-black">
                       <a
-                        className="btn btn-outline-dark btn-lg"
+                        className="btn btn-outline-dark buttonLink"
                         href="https://www.google.com" onClick={(event) => { props.setPage("Sell"); event.preventDefault(); }} role="button">
                         Sell your vehicle
                       </a>
@@ -98,7 +98,7 @@ export default function Home(props) {
                   <div className="d-flex justify-content-center align-items-center h-100">
                     <div className="text-black">
                       <a
-                        className="btn btn-outline-dark btn-lg"
+                        className="btn btn-outline-dark buttonLink"
                         href="#!"
                         role="button"
                       >
