@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar setPage={setPage} />
+      <Navbar page={page} setPage={setPage} />
       <Body page={page} setPage={setPage} />
       <Footer />
     </div>

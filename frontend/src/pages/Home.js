@@ -3,10 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import heroImage from '../../src/home_photo.avif';
 import './Home.css';
 
-
-
-
 export default function Home(props) {
+  const handleClick = (page) => {
+    props.setPage(page);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <>
@@ -45,7 +46,7 @@ export default function Home(props) {
                     <div className="text-black">
                       <a
                         className="btn btn-outline-dark buttonLink"
-                        href="https://www.google.com" onClick={(event) => { props.setPage("Buy"); event.preventDefault(); }} role="button">
+                        href="https://www.google.com" onClick={(event) => { handleClick("Buy"); event.preventDefault(); }} role="button">
                         Find your vehicle
                       </a>
                     </div>
@@ -72,7 +73,7 @@ export default function Home(props) {
                     <div className="text-black">
                       <a
                         className="btn btn-outline-dark buttonLink"
-                        href="https://www.google.com" onClick={(event) => { props.setPage("Sell"); event.preventDefault(); }} role="button">
+                        href="https://www.google.com" onClick={(event) => { handleClick("Sell"); event.preventDefault(); }} role="button">
                         Sell your vehicle
                       </a>
                     </div>
@@ -99,9 +100,7 @@ export default function Home(props) {
                     <div className="text-black">
                       <a
                         className="btn btn-outline-dark buttonLink"
-                        href="#!"
-                        role="button"
-                      >
+                        href="https://www.google.com" onClick={(event) => { handleClick("Contact"); event.preventDefault(); }} role="button">
                         Contact Us
                       </a>
                     </div>
@@ -110,8 +109,9 @@ export default function Home(props) {
               </div>
             </header>
           </Col>
-        </Row >
-      </Container >
+        </Row>
+      </Container>
+
     </>
   );
 }
