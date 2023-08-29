@@ -1,51 +1,51 @@
 import React, { useState } from 'react';
 import "./Filter.css"
 
-const FilterMileage = ({ setMileageOptions }) => {
+const FilterPrice = ({ setPriceOptions }) => {
     const [expanded, setExpanded] = useState(false);
-    const [minMileage, setMinMileage] = useState('');
-    const [maxMileage, setMaxMileage] = useState('');
+    const [minPrice, setMinPrice] = useState('');
+    const [maxPrice, setMaxPrice] = useState('');
 
     const handleExpand = () => {
         setExpanded(!expanded);
     };
 
-    const handleMinMileageChange = (event) => {
+    const handleMinPriceChange = (event) => {
         const { value } = event.target;
-        setMinMileage(value);
-        setMileageOptions((prevOptions) => ({ ...prevOptions, minMileage: value }));
+        setMinPrice(value);
+        setPriceOptions((prevOptions) => ({ ...prevOptions, minPrice: value }));
     };
 
-    const handleMaxMileageChange = (event) => {
+    const handleMaxPriceChange = (event) => {
         const { value } = event.target;
-        setMaxMileage(value);
-        setMileageOptions((prevOptions) => ({ ...prevOptions, maxMileage: value }));
+        setMaxPrice(value);
+        setPriceOptions((prevOptions) => ({ ...prevOptions, maxPrice: value }));
     };
 
     return (
         <div>
             <button onClick={handleExpand}>
-                {expanded ? 'Collapse by Mileage' : 'Filter by Mileage'}
+                {expanded ? 'Collapse by Price' : 'Filter by Price'}
             </button>
             {expanded && (
                 <div>
                     <label>
-                        Minimum Mileage:
+                        Minimum Price:
                         <br />
                         <input
                             type="number"
-                            value={minMileage}
-                            onChange={handleMinMileageChange}
+                            value={minPrice}
+                            onChange={handleMinPriceChange}
                         />
                     </label>
                     <br />
                     <label>
-                        Maximum Mileage:
+                        Maximum Price:
                         <br />
                         <input
                             type="number"
-                            value={maxMileage}
-                            onChange={handleMaxMileageChange}
+                            value={maxPrice}
+                            onChange={handleMaxPriceChange}
                         />
                     </label>
                 </div>
@@ -54,4 +54,4 @@ const FilterMileage = ({ setMileageOptions }) => {
     );
 };
 
-export default FilterMileage;
+export default FilterPrice;

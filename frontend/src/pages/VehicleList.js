@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Vehicle from "../Vehicle";
 import "./VehicleList.css"
 
-export default function VehicleList({ selectedMakes, selectedModels, selectedYears, mileageOptions }) {
+export default function VehicleList({ selectedMakes, selectedModels, selectedYears, mileageOptions, priceOptions }) {
     const [response, setResponse] = useState(null);
 
     useEffect(() => {
@@ -22,6 +22,7 @@ export default function VehicleList({ selectedMakes, selectedModels, selectedYea
 
     return (
         <>
+            <h1>Inventory</h1>
             <div className="vehicleList">
                 {response
                     .filter(vehicle => !selectedMakes.length || selectedMakes.includes(vehicle.make))
@@ -29,6 +30,8 @@ export default function VehicleList({ selectedMakes, selectedModels, selectedYea
                     .filter(vehicle => !selectedYears.length || selectedYears.map(Number).includes(vehicle.year))
                     .filter(vehicle => !mileageOptions.minMileage || vehicle.mileage >= mileageOptions.minMileage)
                     .filter(vehicle => !mileageOptions.maxMileage || vehicle.mileage <= mileageOptions.maxMileage)
+                    .filter(vehicle => !priceOptions.minPrice || vehicle.price >= priceOptions.minPrice)
+                    .filter(vehicle => !priceOptions.maxPrice || vehicle.price <= priceOptions.maxPrice)
                     .map((vehicle) => (
                         <Vehicle
                             key={vehicle._id}
