@@ -31,7 +31,7 @@ export default function VehicleList({ selectedMakes, selectedModels, selectedYea
 
     return (
         <>
-            <h1>{filteredVehicles.length.toLocaleString()} are shown, which one is right for you?</h1>
+            <h1>{filteredVehicles.length.toLocaleString()} vehicles are shown, which one is right for you?</h1>
             <div className="vehicleList">
                 {filteredVehicles.map((vehicle) => (
                     <Vehicle
