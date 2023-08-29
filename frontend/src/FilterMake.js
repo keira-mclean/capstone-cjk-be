@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "./FilterMake.css"
+import "./Filter.css"
 
 const FilterMake = ({ setSelectedOptions }) => {
     const [expanded, setExpanded] = useState(false);
