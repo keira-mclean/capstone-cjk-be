@@ -10,7 +10,7 @@ export default function Home(props) {
 
   return (
     <>
-      <div className="jumboTron container-fluid bg-light p-5" style={{ backgroundImage: `url(${heroImage})` }}>
+      <div className="homeMenu jumboTron container-fluid bg-light p-5" style={{ backgroundImage: `url(${heroImage})` }}>
         <h1 className="display-4">Making the Car Buying and Selling Experience Easy</h1>
 
         <h5 className="heroText">On the road to happiness</h5>
