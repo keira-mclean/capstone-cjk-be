@@ -24,7 +24,7 @@ const FilterMileage = ({ setMileageOptions }) => {
 
     return (
         <div>
-            <button onClick={handleExpand}>
+            <button className="filter-button" onClick={handleExpand}>
                 {expanded ? 'Collapse by Mileage' : 'Filter by Mileage'}
             </button>
             {expanded && (

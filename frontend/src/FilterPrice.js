@@ -24,7 +24,7 @@ const FilterPrice = ({ setPriceOptions }) => {
 
     return (
         <div>
-            <button onClick={handleExpand}>
+            <button className="filter-button" onClick={handleExpand}>
                 {expanded ? 'Collapse by Price' : 'Filter by Price'}
             </button>
             {expanded && (

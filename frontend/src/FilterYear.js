@@ -37,11 +37,11 @@ const FilterYear = ({ setSelectedYearOptions }) => {
 
     return (
         <div>
-            <button onClick={handleExpand}>
+            <button className="filter-button" onClick={handleExpand}>
                 {expanded ? 'Collapse by Year' : 'Filter by Year'}
             </button>
             {expanded && (
-                <ul className="makeList">
+                <ul className="make">
                     {options.map((option) => (
                         <li key={option} className="Make">
                             <label>

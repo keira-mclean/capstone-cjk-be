@@ -1,4 +1,8 @@
-.Make {
+.make {
     list-style-type: none;
     text-align: left;
+}
+.filter-button {
+    width: 100%;
+    
 }
