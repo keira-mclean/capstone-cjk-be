@@ -15,22 +15,23 @@ export default function Vehicle(props) {
         ? mileage.toLocaleString("en-US")
         : "N/A";
 
-
     return (
         <div className="vehicleCard">
             <img
                 className="vehicleImg"
-                src={imgurl}
+                src={imgurl || "https://belowinvoice.com/wp-content/uploads/2020/02/bmw-M8-convertible-e1642634620414.png"}
             ></img>
             <div className="vehicleInfo">
                 <div className="carTitle">
-                    {year} {make} {model}
+                    {year} {make}
+                    <br></br>
+                    {model}
                 </div>
                 <div className="carDetails">
                     {formattedPrice} | {formattedMileage}
                 </div>
                 <a href={"mailto:" + email}>
-                    <button>Contact</button>
+                    <button className="contactButton">Contact</button>
                 </a>
             </div>
         </div>
