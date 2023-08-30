@@ -31,7 +31,7 @@ export default function Vehicle(props) {
                     {formattedPrice} | {formattedMileage}
                 </div>
                 <a href={"mailto:" + email}>
-                    <button className="contactButton">Contact</button>
+                    <button className="contact-card-button">Contact</button>
                 </a>
             </div>
         </div>
