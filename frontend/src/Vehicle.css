@@ -20,13 +20,12 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    block-size: 100px;
+    block-size: 300px;
     height: auto;
     opacity: 1;
     transition: opacity .75s cubic-bezier(.19, 1, .22, 1);
     border-radius: 5%;
     border: 1px solid #dedfe0;
-
 }
 
 .vehicleImg {
