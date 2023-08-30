@@ -13,7 +13,8 @@ button:hover {
 }
 
 .vehicleInfo {
-    border: 1px solid #dedfe0;
+    width: 100%;
+    height: auto;
 }
 
 .vehicleCard {
@@ -25,10 +26,20 @@ button:hover {
     opacity: 1;
     transition: opacity .75s cubic-bezier(.19, 1, .22, 1);
     border-radius: 5%;
+    width: 200px;
     border: 1px solid #dedfe0;
 }
 
 .vehicleImg {
     width: 100%;
     justify-content: center;
+}
+
+.carDetails {
+    font-size: 18px;
+}
+
+.carTitle {
+    font-weight: bold;
+    font-size: 18px;
 }

@@ -28,11 +28,10 @@ export default function Vehicle(props) {
                 </div>
                 <div className="carDetails">
                     {formattedPrice} | {formattedMileage}
-                    <br></br>
-                    <a href={"mailto:" + email}>
-                        <button>Contact</button>
-                    </a>
                 </div>
+                <a href={"mailto:" + email}>
+                    <button>Contact</button>
+                </a>
             </div>
         </div>
     );
