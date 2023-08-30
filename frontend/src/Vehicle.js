@@ -2,7 +2,7 @@ import React from "react";
 import "./Vehicle.css";
 
 export default function Vehicle(props) {
-    const { make, model, year, price, mileage, email } = props;
+    const { make, model, year, price, mileage, email, imgurl } = props;
 
     const formattedPrice = price
         ? price.toLocaleString("en-US", {
@@ -20,7 +20,7 @@ export default function Vehicle(props) {
         <div className="vehicleCard">
             <img
                 className="vehicleImg"
-                src="https://img2.carmax.com/assets/24481790/hero.jpg?width=400"
+                src={imgurl}
             ></img>
             <div className="vehicleInfo">
                 <div className="carTitle">

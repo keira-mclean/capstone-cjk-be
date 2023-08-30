@@ -42,6 +42,7 @@ export default function VehicleList({ selectedMakes, selectedModels, selectedYea
                         price={vehicle.price}
                         mileage={vehicle.mileage}
                         email={vehicle.email}
+                        imgurl={vehicle.imgurl}
                     />
                 ))}
             </div>

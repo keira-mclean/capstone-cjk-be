@@ -10,6 +10,7 @@ export default function PostVehicle(props) {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [errorDetails, setErrorDetails] = useState(null);
+    const [img, setImg] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -19,7 +20,7 @@ export default function PostVehicle(props) {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ make, model, year, mileage, price, email })
+                body: JSON.stringify({ make, model, year, mileage, price, email, img })
             });
             if (response.ok) {
                 setMessage('Form submitted successfully!');
@@ -30,6 +31,8 @@ export default function PostVehicle(props) {
                 setMileage('');
                 setPrice('');
                 setEmail('');
+                setMileage('');
+                setImg('');
             } else {
                 setMessage('Form submission failed.');
                 const errorText = await response.text();
@@ -52,6 +55,9 @@ export default function PostVehicle(props) {
             </div>
             <form className="post-form" onSubmit={handleSubmit}>
                 <h2>Post your vehicle for sale</h2>
+                <div className="postDiv">
+                    <input placeholder="Image URL" className="postInput" type="text" value={make} onChange={e => setImg(e.target.value)} />
+                </div>
                 <div className="postDiv">
                     <input placeholder="Make" className="postInput" type="text" value={make} onChange={e => setMake(e.target.value)} />
                 </div>
