@@ -25,7 +25,8 @@
     color: white;
 }
 .home-text-lg {
-    filter: contrast(1000%)
+    filter: contrast(1000%);
+    color: hsl(240, 32%, 41%);
 }
 .home-text-md {
     color: white;

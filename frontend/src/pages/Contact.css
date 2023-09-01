@@ -6,11 +6,15 @@
 .contactInput {
     display: inline-block;
     width: 20em;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    border: 1px solid hsl(0, 0%, 50%)
 }
 
 .contactDiv {
     border-radius: 3vh;
     background-color: #f2f2f2;
+    margin-top: 20px;;
 }
 
 .contactButton {

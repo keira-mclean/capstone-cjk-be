@@ -34,7 +34,7 @@ const Contact = () => {
       </div>
       </div>
       <div className="contactDiv">
-        <h2 className="mb-3">Contact Us</h2>
+
         {submitted && <p>Thank you for your feedback!</p>}
         <form onSubmit={onSubmit}>
           <div className="mb-3">

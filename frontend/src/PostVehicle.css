@@ -4,6 +4,9 @@
     display: inline-block;
     width: 20em;
     margin-top: 3vh;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    border: 1px solid hsl(0, 0%, 50%)
 }
 
 .postDiv {
