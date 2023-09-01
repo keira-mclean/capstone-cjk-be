@@ -11,12 +11,13 @@ export default function Home(props) {
 
   return (
     <>
-      <div className="homeMenu jumboTron container-fluid bg-light p-5" style={{ backgroundImage: `url(${heroImage})` }}>
-        <h1 className="display-4">Making the Car Buying and Selling Experience Easy</h1>
+      <div>
+        <div id="home-img" className="container-fluid bg-light p-5" style={{ backgroundImage: `url(${heroImage})` }}>
+        <h1 className="home-text-lg">Making the Car Buying and Selling Experience Easy</h1>
 
-        <h5 className="heroText">On the road to happiness</h5>
+        <h5 className="home-text-md">On the road to happiness</h5>
       </div>
-
+      </div>
       <p className="companyInfo">
         The Lot is a company that aims to make private party car sales easier and safer for both buyers and sellers.
         The company provides a platform where people can list their cars for sale, browse through available options,

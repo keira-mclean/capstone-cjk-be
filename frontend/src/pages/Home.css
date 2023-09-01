@@ -2,9 +2,9 @@
     text-align: center;
 }
 
-.homeMenu {
+#home-img {
     background-size: cover;
-    background-color: white;
+    filter: grayscale(60%);
     
 }
 
@@ -24,7 +24,10 @@
     background-color: rgb(232, 150, 150);
     color: white;
 }
-.heroText {
+.home-text-lg {
+    filter: contrast(1000%)
+}
+.home-text-md {
     color: white;
     margin: 40px;
     padding: 150px; 
